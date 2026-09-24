@@ -15,6 +15,10 @@ run/main_scene="res://scenes/maps/casa_diana/casa_a.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*res://scripts/autoload/game_state.gd"
+
 [input]
 
 move_up={
