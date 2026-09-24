@@ -1,19 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqxk8m4vqhfxg"]
+[gd_scene format=3]
 
 [ext_resource type="Script" path="res://scripts/characters/cat_character.gd" id="1_cat_script"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cat"]
 size = Vector2(14, 14)
 
-[node name="CatCharacter" type="CharacterBody2D"]
+[node name="CatCharacter" type="CharacterBody2D" unique_id=1403104527]
 script = ExtResource("1_cat_script")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938956960]
 shape = SubResource("RectangleShape2D_cat")
 
-[node name="Sprite" type="ColorRect" parent="."]
+[node name="Sprite" type="ColorRect" parent="." unique_id=397658811]
 offset_left = -8.0
 offset_top = -8.0
 offset_right = 8.0
 offset_bottom = 8.0
 color = Color(0.3, 0.3, 0.3, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=151911509]
+limit_left = 0
+limit_top = 0
+limit_right = 240
+limit_bottom = 160
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
